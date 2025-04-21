@@ -1,0 +1,3 @@
+SELECT *,
+       AVG(Salary) OVER (ORDER BY HireDate ROWS BETWEEN 1 PRECEDING AND 1 FOLLOWING) AS MovingAvg
+FROM Employees;
